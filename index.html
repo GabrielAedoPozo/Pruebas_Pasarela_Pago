@@ -1,0 +1,17 @@
+<script src="https://js.stripe.com/v3/"></script>
+
+<button id="pay">Pagar ahora</button>
+
+<script>
+const stripe = Stripe("pk_test_51SaOAFCYL0bIAm6bMSzRH0uqHiqYLroKXb5YoRkbtUgR5LfEFc7FCOCtwDVZSeRGbz3HrRHMaqLgoDUI0QatatXu00WtlXFmXo");
+
+document.getElementById("pay").addEventListener("click", async () => {
+  const res = await fetch("/api/checkout", {
+    method: "POST"
+  });
+
+  const data = await res.json();
+
+  stripe.redirectToCheckout({ sessionId: data.id });
+});
+</script>

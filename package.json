@@ -1,0 +1,15 @@
+{
+  "name": "pasarela-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "stripe": "^20.0.0"
+  }
+}
